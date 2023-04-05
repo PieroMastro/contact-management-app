@@ -1,10 +1,10 @@
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ContactListContext } from "path/to/contactlist/context";
+import { ContactsContext } from "path/to/contactlist/context";
 
 const Contact = ({ contact }) => {
-    const context = useContext(ContactListContext);
+    const context = useContext(ContactsContext);
 
     const handleDelete = () => {
         context.deleteContact(contact.id);
@@ -16,7 +16,7 @@ const Contact = ({ contact }) => {
                 <div className="col-12 col-lg-3 d-flex p-2 justify-content-center align-items-center">
                     <img
                         src="https://picsum.photos/200/300"
-                        className="img-redonda"
+                        className="img-round"
                         alt="..."
                     />
                 </div>
