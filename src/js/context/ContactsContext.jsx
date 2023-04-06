@@ -1,6 +1,6 @@
 import React, { createContext, useState, useCallback } from "react";
 
-export const ContactListContext = createContext();
+export const ContactsContext = createContext();
 
 const API_URL = "https://assets.breatheco.de/apis/fake/contact/piero_mastro";
 
@@ -91,7 +91,7 @@ const ContactListContextProvider = ({ children }) => {
     }, [getContactList]);
 
     return (
-        <ContactListContext.Provider
+        <ContactsContext.Provider
             value={{
                 contactList,
                 getContactList,
@@ -101,7 +101,7 @@ const ContactListContextProvider = ({ children }) => {
             }}
         >
             {children}
-        </ContactListContext.Provider>
+        </ContactsContext.Provider>
     );
 };
 
